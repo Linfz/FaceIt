@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="scale">
-                                        <real key="value" value="0.90000000000000002"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="mouthCurvature">
                                         <real key="value" value="-0.5"/>
@@ -48,6 +48,9 @@
                             <constraint firstItem="Mbe-BP-vwG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="KY6-5v-Rex"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="Mbe-BP-vwG" id="3co-PZ-0Lc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

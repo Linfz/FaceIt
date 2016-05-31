@@ -14,7 +14,7 @@ class FaceView: UIView {
     @IBInspectable
     var scale: CGFloat = 0.90 { didSet { setNeedsDisplay() } }
     @IBInspectable
-    var mouthCurvature: Double = 1.0 { didSet { setNeedsDisplay() } }// 1 full smile, -1 full frown
+    var mouthCurvature: Double = 1 { didSet { setNeedsDisplay() } }// 1 full smile, -1 full frown
     @IBInspectable
     var eyesOpen: Bool = false { didSet { setNeedsDisplay() } }
     @IBInspectable
@@ -34,7 +34,7 @@ class FaceView: UIView {
     private struct Ratios {
         static let SkullRadiusToEyeOffset: CGFloat = 3
         static let SkullRadiusToEyeRadius: CGFloat = 10
-        static let SkullRadiusToMouthWith: CGFloat = 1
+        static let SkullRadiusToMouthWidth: CGFloat = 1
         static let SkullRadiusToMouthHeight: CGFloat = 3
         static let SkullRadiusToMouthOffset: CGFloat = 3
         static let SkullRadiusToBrowOffset: CGFloat = 5
@@ -85,13 +85,11 @@ class FaceView: UIView {
     }
     
     private func pathForMouth() -> UIBezierPath {
-        let mouthWidth = skullRadius / Ratios.SkullRadiusToMouthWith
+        let mouthWidth = skullRadius / Ratios.SkullRadiusToMouthWidth
         let mouthHeight = skullRadius / Ratios.SkullRadiusToMouthHeight
         let mouthOffset = skullRadius / Ratios.SkullRadiusToMouthOffset
         
         let mouthRect = CGRect(x: skullCenter.x - mouthWidth / 2, y: skullCenter.y + mouthOffset, width: mouthWidth, height: mouthHeight)
-        
-        let mouthCurvature: Double = 0 
         
         let smileOffset = CGFloat(max(-1, min(mouthCurvature, 1))) * mouthRect.height
         let start = CGPoint(x: mouthRect.minX, y: mouthRect.minY)
