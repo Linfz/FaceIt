@@ -103,7 +103,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="mouthCurvature">
                                         <real key="value" value="-0.5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="eyesOpen" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="eyesOpen" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="eyeBrowTilt">
                                         <real key="value" value="-0.5"/>
                                     </userDefinedRuntimeAttribute>
@@ -135,7 +135,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="PhU-Ar-SlD">
                     <connections>
-                        <action selector="toggleEyes:" destination="BYZ-38-t0r" id="xvi-SD-WDj"/>
+                        <action selector="headShake:" destination="BYZ-38-t0r" id="4GH-kp-mSd"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
